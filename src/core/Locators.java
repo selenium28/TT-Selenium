@@ -23,25 +23,36 @@ public class Locators {
 		//2.By using name
 		WebElement password = driver.findElement(By.name("pass")); 
 		password.sendKeys("abcd");
-		
-//		//3. Tag Name
-//		WebElement tag = driver.findElement(By.tagName("a"));
-//		tag.click();
-//		
+
+		//		//3. Tag Name
+		//		WebElement tag = driver.findElement(By.tagName("a"));
+		//		tag.click();
+		//		
 		//4. Link text
 		WebElement forgetPassword = driver.findElement(By.linkText("Forgotten password?"));
 		forgetPassword.click();
 
-//		//5. Partial Link text
-//		WebElement forgetPass = driver.findElement(By.linkText("Forgotten pass"));
-//		forgetPass.click();
-//		
-//		// Xpath
-//		WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']")); 
-//		loginButton.click();
-		
-		
+		//5. Partial Link text
+		WebElement forgetPass = driver.findElement(By.linkText("Forgotten pass"));
+		forgetPass.click();
 
+		// Xpath - Absolute
+		WebElement loginButton = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")); 
+		loginButton.click();
+
+		// Xpath - Relative - Contains Text
+		WebElement configuration = driver.findElement(By.xpath("//*[contains(text(),'Configuration ')]")); 
+		configuration.click();
+
+		// Xpath - Following 
+		WebElement enterName = driver.findElement(By.xpath("//*[text()='Employee Information']//following::input[2]")); 
+		enterName.click();
+
+		// cssSelector
+		WebElement loginBut = driver.findElement(By.cssSelector("button[type='submit']")); 
+		loginBut.click();
+
+       
 	}
 
 }

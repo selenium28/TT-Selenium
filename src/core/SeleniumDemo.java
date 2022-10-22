@@ -37,3 +37,5 @@ public class SeleniumDemo {
 //http://demo.guru99.com/test/delete_customer.php  --- AlertPopup
 //https://www.travolook.in/?gclid=Cj0KCQjw4cOEBhDMARIsAA3XDRjGAeFHS8cqdKjY45Sc7ZEf98H63uG7bP6HsxGr9ugbNNNMU0GJZdYaAoH4EALw_wcB   --- ActionClass
 //http://automationpractice.com/index.php
+//https://jqueryui.com/droppable/   -- > Drag n Drop
+//http://demo.guru99.com/test/upload/    -- > File Uploading

@@ -1,5 +1,7 @@
 package core;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +14,7 @@ public class PopUpHanding {
 
 		System.setProperty("webdriver.chrome.driver", "Resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.guru99.com/test/delete_customer.php");
 		driver.manage().window().maximize();
 		System.out.println("Browser has been Launched");
